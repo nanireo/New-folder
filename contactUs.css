@@ -1,0 +1,45 @@
+.contact-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+}
+
+.contact-box h3 {
+    margin-top: 0;
+}
+
+.contact-box p {
+    margin: 10px 0;
+}
+
+.call-us {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.call-us:hover {
+    background-color: #218838;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0; /* Remove padding to eliminate extra space */
+    box-shadow: none; /* Remove box shadow if you want a cleaner look */
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 70px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    background: none; /* Ensure no background is applied */
+    border-radius: 50%; /* Optional: Make the icon circular if you like */
+}

@@ -117,3 +117,18 @@ footer p {
         display: flex;
     }
 }
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0; /* Remove padding to eliminate extra space */
+    box-shadow: none; /* Remove box shadow if you want a cleaner look */
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 70px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    background: none; /* Ensure no background is applied */
+    border-radius: 50%; /* Optional: Make the icon circular if you like */
+}
