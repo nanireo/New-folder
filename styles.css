@@ -77,8 +77,13 @@ nav {
     object-fit: cover; /* Ensures the image covers the entire area */
 }
 
+main section {
+    padding: 20px; /* Add padding to sections */
+}
 
-
+section p {
+    text-align: justify; /* Justify text in paragraphs */
+}
 
 footer {
     background-color: #003366;
