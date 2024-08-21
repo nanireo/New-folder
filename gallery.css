@@ -1,0 +1,29 @@
+
+main {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+main div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+main img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* 2x2 grid for images */
+main div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
