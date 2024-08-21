@@ -90,45 +90,6 @@ nav {
     object-fit: cover;
 }
 
-
-/* Image Container */
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.image-container img {
-    width: 2.8in;
-    height: 3in;
-    margin: 0 10px;
-    border: 2px solid #003366;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
-
-    nav .mobile-menu {
-        display: block;
-    }
-
-    .image-container {
-        flex-direction: column;
-    }
-
-    .image-container img {
-        margin-bottom: 20px;
-        margin: 0 auto;
-    }
-}
-
-
-
 main section {
     padding: 20px;
 }
