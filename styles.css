@@ -19,6 +19,8 @@ header {
     background-color: #003366;
     color: #fff;
     padding: 20px 20px;
+    position: relative;
+    z-index: 1000;
 }
 
 .container {
@@ -36,6 +38,7 @@ header {
 nav {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .nav-links {
@@ -61,6 +64,7 @@ nav {
     width: 25px;
     height: 3px;
     background-color: #fff;
+    transition: all 0.3s ease;
 }
 
 .mobile-menu.open span:nth-child(1) {
@@ -141,28 +145,45 @@ footer p {
     border-radius: 50%;
 }
 
+
+
+
 @media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
+        align-items: center; /* Center menu items horizontally */
+        justify-content: center; /* Center menu items vertically */
         background-color: #003366;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
+        position: fixed; /* Use fixed positioning for full screen */
+        bottom: 0; /* Start from the bottom of the viewport */
+        left: 0; /* Start from the left of the viewport */
+        width: 100vw; /* Full viewport width */
+        height: auto; /* Adjust height based on content */
+        padding: 20px;
+        box-sizing: border-box; /* Include padding in width and height */
+        z-index: 1000;
         text-align: center;
-        padding: 10px 0;
+        transition: transform 0.3s ease; /* Smooth transition for the menu */
+        transform: translateY(100%); /* Start hidden off the screen */
     }
 
     .nav-links.show {
         display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
+        transform: translateY(0); /* Slide up to visible */
     }
 
     .mobile-menu {
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1100; /* Ensure the mobile menu button is above other elements */
     }
 }
+
+
