@@ -172,7 +172,7 @@ footer p {
         transform: translateY(100%); /* Start hidden off the screen */
         list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 50px;
     margin: 0; /* Add this line to remove the default margin */
     padding: 0;
     }
