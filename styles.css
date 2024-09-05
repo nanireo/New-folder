@@ -164,12 +164,17 @@ footer p {
         left: 0; /* Start from the left of the viewport */
         width: 100vw; /* Full viewport width */
         height: auto; /* Adjust height based on content */
-        padding: 20px;
+        padding: 0px;
         box-sizing: border-box; /* Include padding in width and height */
         z-index: 1000;
         text-align: center;
         transition: transform 0.3s ease; /* Smooth transition for the menu */
         transform: translateY(100%); /* Start hidden off the screen */
+        list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0; /* Add this line to remove the default margin */
+    padding: 0;
     }
 
     .nav-links.show {
