@@ -82,12 +82,29 @@ nav {
 .header-image {
     width: 100%;
     height: 75vh;
+    position: relative;
+    overflow: hidden;
 }
 
-.header-image img {
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 main section {
@@ -108,6 +125,20 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 70px;
+    height: auto;
+    background: none;
+    border-radius: 50%;
 }
 
 @media (max-width: 768px) {
@@ -134,18 +165,4 @@ footer p {
     .mobile-menu {
         display: flex;
     }
-}
-
-.whatsapp-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.whatsapp-icon img {
-    width: 70px;
-    height: auto;
-    background: none;
-    border-radius: 50%;
 }
