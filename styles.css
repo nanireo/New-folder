@@ -158,7 +158,7 @@ footer p {
         flex-direction: column;
         align-items: center; /* Center menu items horizontally */
         justify-content: center; /* Center menu items vertically */
-        background-color: #003366;
+        background-color: #020d18;;
         position: fixed; /* Use fixed positioning for full screen */
         bottom: 0; /* Start from the bottom of the viewport */
         left: 0; /* Start from the left of the viewport */
