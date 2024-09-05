@@ -180,9 +180,8 @@ footer p {
     .mobile-menu {
         display: flex;
         flex-direction: column;
-        gap: 5px;
         cursor: pointer;
-        z-index: 1100; /* Ensure the mobile menu button is above other elements */
+        /*z-index: 1100; Ensure the mobile menu button is above other elements */
     }
 }
 
