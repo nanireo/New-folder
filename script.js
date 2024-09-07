@@ -21,8 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
         slides.style.transform = `translateX(${-index * 100}%)`;
     }
 
+    
+
     // Change image every 3 seconds
     setInterval(showNextImage, 3000);
+
 });
 
 

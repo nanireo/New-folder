@@ -6,7 +6,6 @@
     <title>Hanna College of Education</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="gallery.css">
-
 </head>
 <body>
     <header>
@@ -36,39 +35,41 @@
     </header>
     
     <main>
-        <div>
-
-            <img src="images/15g.jpeg" alt="Suvarn kumar">
-            <img src="images/161g.jpg" alt="Suvarn kumar">
-            <img src="images/18g.jpeg" alt="Suvarn kumar">
-            <img src="images/19g.jpeg" alt="Suvarn kumar">
-            <img src="images/20g.jpeg" alt="Suvarn kumar">
-            <img src="images/21g.jpeg" alt="Suvarn kumar">
-            <img src="images/22g.jpeg" alt="Suvarn kumar">
-            <img src="images/23g.jpeg" alt="Suvarn kumar">
-            <img src="images/24g.jpeg" alt="Suvarn kumar">
-            <img src="images/26g.jpeg" alt="Suvarn kumar">
-            <img src="images/27g.jpeg" alt="Suvarn kumar">
-            <img src="images/28g.jpeg" alt="Suvarn kumar">
-            <!-- <img src="images/17g.jpeg" alt="Suvarn kumar"> -->
-
+        <div class="gallery">
+            <img src="images/15g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/161g.jpg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/18g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/19g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/20g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/21g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/22g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/23g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/24g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/26g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/27g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
+            <img src="images/28g.jpeg" alt="Suvarn kumar" onclick="openModal(this)">
         </div>
     </main>
     
     <footer>
         <div>
             <p>&copy; 2024 Hanna College of Education. All rights reserved.</p>
-        <p>Email: hannabed@rediffmail.com | Phone: 9494718444</p>
-
-        <p style="font-size: 10px;">Powered By <a href="https://n-reo.com/" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 10px;">N-Reo Software Solutions</a></p>
-    </div>
-
+            <p>Email: hannabed@rediffmail.com | Phone: 9494718444</p>
+            <p style="font-size: 10px;">Powered By <a href="https://n-reo.com/" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 10px;">N-Reo Software Solutions</a></p>
+        </div>
     </footer>
     <div class="whatsapp-icon">
         <a href="https://wa.me/9494718444" target="_blank">
             <img src="images/whatsapp-icon.png" alt="WhatsApp">
         </a>
     </div>
+
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
