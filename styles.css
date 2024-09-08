@@ -16,6 +16,7 @@ main {
     flex: 1; /* Ensures the main content takes up available space */
 }
 
+/* Header Styles */
 header {
     background-color: #020d18;
     color: #fff;
@@ -35,7 +36,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
 }
 
 .logo {
@@ -57,13 +57,20 @@ header {
 /* Updated Navigation styles */
 nav {
     display: flex;
+    align-items: center;
+    position: relative; /* Ensure positioning is relative for dropdown */
 }
 
+/* Style for navigation links */
 .nav-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
+}
+
+.nav-links li {
+    position: relative; /* Ensure dropdown positioning is relative to the list item */
 }
 
 .nav-links li a {
@@ -73,26 +80,48 @@ nav {
     padding: 5px 10px; /* Adds padding for clickable area */
 }
 
+/* Dropdown Menu Styles */
+.dropdown-content {
+    min-width: 160px; /* Adjust width as needed */
+    position: absolute; /* Position dropdown absolutely */
+    top: 100%; /* Position dropdown directly below the parent */
+    left: 0; /* Align to the left of the parent */
+    background-color: #020d18; /* Background color of dropdown */
+    z-index: 2000; /* Ensure dropdown is above other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for better visibility */
+    display: none; /* Hide dropdown by default */
+}
+
+.nav-links li:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display for easy clicking */
+}
+
+/* Mobile menu styles */
 .mobile-menu {
     display: none;
     flex-direction: column;
-    gap: 5px;
     cursor: pointer;
 }
 
-/* Styles for mobile menu icon */
 .mobile-menu span {
     width: 25px;
     height: 3px;
     background-color: #fff;
     transition: all 0.3s ease;
+    margin: 5px 0; /* Add margin to ensure even spacing */
 }
 
-/* Sticky effect for mobile menu */
+/* Transform mobile menu icon to a cross */
 .mobile-menu.open span:nth-child(1) {
     transform: rotate(45deg);
-    top: 6px;
-    position: relative;
 }
 
 .mobile-menu.open span:nth-child(2) {
@@ -101,8 +130,6 @@ nav {
 
 .mobile-menu.open span:nth-child(3) {
     transform: rotate(-45deg);
-    top: -6px;
-    position: relative;
 }
 
 /* Styling for the header image */
@@ -171,7 +198,6 @@ footer p {
 }
 
 /* Media queries for mobile responsiveness */
-/* Mobile responsiveness for navigation and other elements */
 @media (max-width: 768px) {
     /* Hide the nav links by default */
     .nav-links {
@@ -181,17 +207,16 @@ footer p {
         justify-content: center;
         background-color: #020d18;
         position: fixed;
-        bottom: 0;
+        top: 0; /* Position dropdown below the header */
         left: 0;
-        width: 100vw;
-        height: auto;
+        width: 100%;
+        height: 100%; /* Full height */
         padding: 0;
         box-sizing: border-box;
         z-index: 1000;
         text-align: center;
         transition: transform 0.3s ease;
-        transform: translateY(100%);
-        list-style: none;
+        transform: translateY(-100%);
     }
 
     /* Show the nav links when active */
@@ -212,6 +237,7 @@ footer p {
         height: 3px;
         background-color: #fff;
         transition: all 0.3s ease;
+        margin: 5px 0; /* Ensure proper spacing */
     }
 
     /* Transform mobile menu icon to a cross */
@@ -235,22 +261,43 @@ footer p {
 @media (max-width: 480px) {
     .dropdown-content {
         min-width: 90px;
+        position: absolute; /* Position dropdown absolutely */
+        top: 100%; /* Position dropdown below the parent */
+        left: 0; /* Align to the left of the parent */
+        background-color: #020d18; /* Background color of dropdown */
+        z-index: 2000; /* Ensure dropdown is above other elements */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for better visibility */
+        display: none; /* Hide dropdown by default */
+    }
+
+    .dropdown-content.show {
+        display: block; /* Show dropdown when active */
     }
 
     .dropdown-content a {
         padding: 6px 5px;
         font-size: 12px;
+        color: #fff; /* Text color */
+        text-decoration: none; /* Remove underline */
+        display: block; /* Block display for easy clicking */
+    }
+
+    .dropdown-submenu {
+        position: relative; /* Ensure submenu is positioned relative to the parent */
     }
 
     .dropdown-submenu .submenu-content {
         min-width: 90px;
-        left: 0;
-        top: 100%;
+        left: 100%; /* Position submenu to the right of the parent */
+        top: 0; /* Align to the top of the parent */
+        background-color: #020d18; /* Background color of submenu */
+        z-index: 2000; /* Ensure submenu is above other elements */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for better visibility */
+        display: none; /* Hide submenu by default */
     }
 
     .dropdown-submenu:hover .submenu-content {
-        left: 100%;
-        top: 0;
+        display: block; /* Show submenu on hover */
     }
 
     .nav-links .dropdown-submenu ul,
