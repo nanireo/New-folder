@@ -261,7 +261,7 @@ footer p {
 @media (max-width: 480px) {
     .dropdown-content {
         min-width: 90px;
-        position: absolute; /* Position dropdown absolutely */
+        position: relative ; /* Position dropdown absolutely */
         top: 100%; /* Position dropdown below the parent */
         left: 0; /* Align to the left of the parent */
         background-color: #020d18; /* Background color of dropdown */
@@ -270,30 +270,26 @@ footer p {
         display: none; /* Hide dropdown by default */
     }
 
+    .nav-links li:hover .dropdown-content {
+        display: block;
+    }
+    .nav-links li {
+        position: relative; /* Ensure positioning is relative for dropdown */
+    }
+    
+    .dropdown-content {
+        min-width: 160px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #020d18;
+        z-index: 2000; /* Ensure dropdown is above other elements */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
     .dropdown-content.show {
         display: block; /* Show dropdown when active */
-    }
-
-    .dropdown-content a {
-        padding: 6px 5px;
-        font-size: 12px;
-        color: #fff; /* Text color */
-        text-decoration: none; /* Remove underline */
-        display: block; /* Block display for easy clicking */
-    }
-
-    .dropdown-submenu {
-        position: relative; /* Ensure submenu is positioned relative to the parent */
-    }
-
-    .dropdown-submenu .submenu-content {
-        min-width: 90px;
-        left: 100%; /* Position submenu to the right of the parent */
-        top: 0; /* Align to the top of the parent */
-        background-color: #020d18; /* Background color of submenu */
-        z-index: 2000; /* Ensure submenu is above other elements */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for better visibility */
-        display: none; /* Hide submenu by default */
     }
 
     .dropdown-submenu:hover .submenu-content {
@@ -303,5 +299,32 @@ footer p {
     .nav-links .dropdown-submenu ul,
     .nav-links .dropdown-submenu li {
         list-style: none;
+    }
+}
+/* Mobile Menu Adjustments */
+@media (max-width: 768px) {
+    /* Display the nav links when active */
+    .nav-links.show {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    /* Adjust dropdown for mobile view */
+    .dropdown-content {
+        min-width: 90px; /* Adjust width for smaller screens */
+        position: static; /* Change position to static for mobile view */
+        box-shadow: none; /* Remove shadow for mobile view */
+        display: none; /* Hide dropdown by default */
+    }
+
+    .nav-links.show .dropdown-content {
+        display: block; /* Show dropdown when nav-links is shown */
+    }
+}
+
+/* Ensure dropdown is displayed on mobile */
+@media (max-width: 480px) {
+    .nav-links li:hover .dropdown-content {
+        display: block; /* Ensure dropdown is displayed on hover */
     }
 }
