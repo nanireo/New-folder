@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     mobileMenu.addEventListener('click', function() {
         mobileMenu.classList.toggle('open');
-        navLinks.classList.toggle('show');
+        navLinks.classList.toggle('show'); // Ensure this class matches the CSS
     });
 
     // Sliding image carousel functionality
@@ -21,11 +21,16 @@ document.addEventListener('DOMContentLoaded', function() {
         slides.style.transform = `translateX(${-index * 100}%)`;
     }
 
-    
-
     // Change image every 3 seconds
     setInterval(showNextImage, 3000);
 
+    // Close button functionality for dropdown menu
+    const closeBtn = document.querySelector('.dropdown-content .close-btn');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            const dropdownContent = closeBtn.parentElement;
+            dropdownContent.classList.remove('show');
+        });
+    }
 });
-
-

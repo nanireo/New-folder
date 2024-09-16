@@ -1,0 +1,74 @@
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.mobile-menu.open span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.mobile-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+
+/* Styles for screens 768px and below */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed; /* Changed from absolute to fixed */
+        top: 80px; /* Adjust based on header height */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 100%;
+        max-width: 600px; /* Optional: limit the maximum width */
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: block;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Styles for screens 480px and below */
+@media (max-width: 480px) {
+    .logo img {
+        height: 60px; /* Adjust logo size for smaller screens */
+        margin-right: 5px; /* Adjust margin */
+    }
+
+    .logo h4 {
+        font-size: 18px; /* Adjust font size for the college name */
+    }
+
+    .nav-links li {
+        font-size: 14px; /* Adjust font size for nav items */
+    }
+}

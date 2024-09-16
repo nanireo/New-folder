@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanna College of Education</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="dropdown.css">
+
+
 </head>
 <body>
     <header>
@@ -14,25 +18,24 @@
                 <h4>HANNA COLLEGE OF EDUCATION</h4>
             </div>
             
-            <nav>
+            <nav class="headbar">
                 <ul class="nav-links">
                     <li><a href="#">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="principalMessage.html">Principal Message</a></li>
-                    <li><a href="#">Staff</a></li>
                     <li><a href="#">Course</a></li>
                     <li><a href="Infrastructure.html">Infrastructure</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contactUs.html">Contact Us</a></li>
                 </ul>
-                <div class="mobile-menu">
-                    <span class="menu-icon"></span>
-                    <span class="menu-icon"></span>
-                    <span class="menu-icon"></span>
+                <div class="mobile-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </nav>
         </div>
-    </header>    
+    </header>
     
     <main>
         <div class="header-image">
@@ -45,21 +48,9 @@
                 </div>
             </div>
         </div>
-        
 
         <br>
-        <!-- <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="solomon.png" alt="solomon" style="width: 2.8in; height: 3in;">
-            <!-- <img src="Suvarn kumar.jpg" alt="Suvarn kumar" style="width: 2.8in; height: 3in;">
-        </div>
-
-        <br>
-
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="Suvarn kumar.jpg" alt="Suvarn kumar" style="width: 2.8in; height: 3in;">
-        </div> -->
-    
-        <!-- <h2 style="text-align: center;">HANNA COLLEGE OF EDUCATION</h2> -->
+     
         <section id="about">
             <h2>About Us</h2>
             <p>Hanna College of Education is a premier institute of Teachers’ Training & Education, presently affiliated by Adikavi Nannaya University, Rajamahendravaram. Previously it was Andhra University, Visakhapatnam. It is located in Gokavaram, East Godavari & it was established by Hanna Charitable Trust in 2007. Since then, we never looked back.</p>
@@ -69,30 +60,23 @@
             <h2>College Courses</h2>
             <p>B. Ed, referred to as Bachelor of Education, is a Bachelor’s Degree undertaken by those who wish to opt for teaching as their profession. The course duration is typically 2 years, with a total of 4 semesters. This degree is necessary for teaching at secondary and higher secondary divisions. The B. Ed course is designed to develop skills and understanding to impart quality education to students.</p>
         </section>
-
-        <!-- <section id="principal-message">
-            <h2>Principal's Message</h2>
-            <p>It gives me immense pleasure to welcome you to Hanna College. This college has completed sixteen years of its fruitful existence and is growing qualitatively. The prospective teachers who have passed out of the college are rendering admirable services not only in the educational sector of the state but also at the national level. I am fully optimistic that the present and future teacher trainees will keep this torch of excellence burning bright till time immemorial in the spheres of life wherever they serve.
-                Our academic record has been outstanding since the inception of the institution. Moreover, the college has a commendable record of very high pass percentage every year, with a maximum number of first-class and distinctions in both theory and practice of teaching in the annual university examination results.
-                I hope that the students of the present batch would also draw inspiration and benefit from the rich educational environment and attain excellence in the area of teacher education, thus contributing to national development.
-            </p>
-        </section> -->
     </main>
     
     <footer>
         <div>
             <p>&copy; 2024 Hanna College of Education. <br> All rights reserved.</p>
-        <p>Email: hannabed@rediffmail.com  <br> Phone: 9494718444</p>
-
-        <p style="font-size: 10px;">Powered By <a href="https://n-reo.com/" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 10px;">N-Reo Software Solutions</a></p>
-    </div>
-
+            <p>Email: hannabed@rediffmail.com  <br> Phone: 9494718444</p>
+            <p style="font-size: 10px;">Powered By <a href="https://n-reo.com/" target="_blank" rel="noopener noreferrer" style="color: white; font-size: 10px;">N-Reo Software Solutions</a></p>
+        </div>
     </footer>
     <div class="whatsapp-icon">
         <a href="https://wa.me/9494718444" target="_blank">
             <img src="images/whatsapp-icon.png" alt="WhatsApp">
         </a>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" >
+
+    </script>
 </body>
 </html>
+
