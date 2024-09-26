@@ -43,3 +43,8 @@
     background: none; /* Ensure no background is applied */
     border-radius: 50%; /* Optional: Make the icon circular if you like */
 }
+
+.maps{
+    width: 100%;
+    
+}
